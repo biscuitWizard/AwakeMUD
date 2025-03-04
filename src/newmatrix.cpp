@@ -381,9 +381,6 @@ bool dumpshock(struct matrix_icon *icon)
     // No reason to double-damage
     if (!PLR_FLAGGED(ch, PLR_MATRIX))
       return FALSE;
-    // If they're stunned or dead, there's no reason to take dumpshock damage.
-    if (GET_POS(ch) <= POS_STUNNED)
-      return FALSE; 
     if (damage(ch, ch, dam, TYPE_DUMPSHOCK, MENTAL))
       return TRUE;
   } else {
